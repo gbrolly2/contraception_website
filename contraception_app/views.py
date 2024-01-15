@@ -20,7 +20,25 @@ from .forms import QuestionnaireForm
 # patch 
 # ring 
 
-
+NAME_MAPPING = {
+    'iud': 'Hormonal IUD',
+    'copper_iud': 'Copper IUD',
+    'combined_oral_hormonal': 'Combined Hormonal Oral Contraception',
+    'nexplanon': 'Nexplanon Contraceptive Implant',
+    'depo-provera': 'Depo-Provera Contraceptive Injection',
+    'progesterone_only_oral_hormonal': 'Progesterone Only Oral Contraception',
+    'sterilization': 'Tubal Ligation (Sterilization)',
+    'emergency': 'Emergency Contraception',
+    'cervical_caps_and_diaphragms': 'Cervical Cap or Diaphragm',
+    'fam': 'Family Planning',
+    'condoms': 'Condoms',
+    'internal_condoms': 'Internal Condoms',
+    'spermicide_or_vaginal_sponge': 'Spermicide or Vaginal Sponge',
+    'pulling_out': 'Pulling Out',
+    'abstinence': 'Abstinence',
+    'patch': 'Birth Control Patch',
+    'ring': 'Vaginal Ring',
+}
 #logic for results
 def calculate_total(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14, question15, question16, question17, question18, question19, question20):
 
@@ -174,7 +192,8 @@ def calculate_total(question1, question2, question3, question4, question5, quest
     
 
     sorted_results = sorted(results.items(), key=lambda x: x[1], reverse=True)
-    sorted_results = [(method, score) for method, score in sorted_results if score != -1]
+    # sorted_results = [(method, score) for method, score in sorted_results if score != -1]
+    sorted_results = [NAME_MAPPING[method] for method, score in sorted_results if score != -1]
 
     return sorted_results
 
