@@ -1,0 +1,240 @@
+<!-- questionnaire.html -->
+
+<style>
+  .form-group {
+    margin-bottom: 20px;
+  }
+</style>
+
+
+<form method="post">
+
+  {% csrf_token %}
+
+  <!-- Question 1 -->
+  <div class="form-group">
+    <label for="question1">1. Have you given birth in the last 6 weeks?</label><br>
+    <label><input type="radio" name="question1" value="yes"> Yes</label>
+    <label><input type="radio" name="question1" value="no"> No</label>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="form-group">
+    <label for="question2">2. Are you currently breastfeeding?</label><br>
+    <label><input type="radio" name="question2" value="yes"> Yes</label>
+    <label><input type="radio" name="question2" value="no"> No</label>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="form-group">
+    <label for="question3">3. Have you given birth in the past 6 months?</label><br>
+    <label><input type="radio" name="question3" value="yes"> Yes</label>
+    <label><input type="radio" name="question3" value="no"> No</label>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="form-group">
+    <label for="question4">4. Do you have any of the following history? (Select multiple if applicable)</label><br>
+    <label><input type="checkbox" name="question4" value="a"> 35 years or older and smoke</label><br>
+    <label><input type="checkbox" name="question4" value="b"> High blood pressure</label><br>
+    <label><input type="checkbox" name="question4" value="c"> Blood clotting in your legs, lungs, brain or anywhere else</label><br>
+    <label><input type="checkbox" name="question4" value="d"> Inherited clotting disorder of any kind</label><br>
+    <label><input type="checkbox" name="question4" value="e"> Lupus with positive or unknown antibodies</label><br>
+    <label><input type="checkbox" name="question4" value="f"> Valvular heart disease</label><br>
+    <label><input type="checkbox" name="question4" value="g"> Active breast cancer, or uterine or endometrial cancer</label><br>
+    <label><input type="checkbox" name="question4" value="h"> Migraine with aura</label><br>
+    <label><input type="checkbox" name="question4" value="i"> Liver disease</label><br>
+    <label><input type="checkbox" name="question4" value="j"> None of the above</label>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="form-group">
+    <label for="question5">5. History of seizure disorder?</label><br>
+    <label><input type="radio" name="question5" value="yes"> Yes</label>
+    <label><input type="radio" name="question5" value="no"> No</label>
+  </div>
+
+  <!-- Question 6 -->
+  <div class="form-group">
+      <label for="question6">6. Do you take either of the following Carbamazepine/Phenytoin?</label><br>
+      <label><input type="radio" name="question6" value="yes"> Yes</label>
+      <label><input type="radio" name="question6" value="no"> No</label>
+    </div>
+  
+  <!-- Question 7 -->
+  <div class="form-group">
+      <label for="question7">7. History of irritable bowel disease, Crohn's disease or Ulcerative colitis?</label><br>
+      <label><input type="radio" name="question7" value="yes"> Yes</label>
+      <label><input type="radio" name="question7" value="no"> No</label>
+    </div>
+
+  <!-- Question 8 -->
+  <div class="form-group">
+      <label for="question8">8. History of diabetes?</label><br>
+      <label><input type="radio" name="question8" value="yes"> Yes</label>
+      <label><input type="radio" name="question8" value="no"> No</label>
+    </div>
+  
+  <!-- Question 9 -->
+  <div class="form-group">
+      <label for="question9">9. Do you have a copper allergy?</label><br>
+      <label><input type="radio" name="question9" value="yes"> Yes</label>
+      <label><input type="radio" name="question9" value="no"> No</label>
+    </div>
+
+  <!-- Question 10 -->
+  <div class="form-group">
+      <label for="question10">10.	Do you have an allergy to silicone?</label><br>
+      <label><input type="radio" name="question10" value="yes"> Yes</label>
+      <label><input type="radio" name="question10" value="no"> No</label>
+    </div>
+  
+  <!-- Question 11 -->
+  <div class="form-group">
+      <label for="question11">11.	Have you ever been diagnosed with an anatomical abnormality of the uterus? </label><br>
+      <label><input type="radio" name="question11" value="yes"> Yes</label>
+      <label><input type="radio" name="question11" value="no"> No</label>
+    </div>
+  
+  <!-- Question 12 -->
+  <div class="form-group">
+      <label for="question12">12.	Have you ever been diagnosed with a pelvic infection (PID)?</label><br>
+      <label><input type="radio" name="question12" value="yes"> Yes</label>
+      <label><input type="radio" name="question12" value="no"> No</label>
+    </div>
+  
+  <!-- Question 13 -->
+  <div class="form-group">
+      <label for="question13">13.	Do you have a current sexually transmitted infection (STI)?</label><br>
+      <label><input type="radio" name="question13" value="yes"> Yes</label>
+      <label><input type="radio" name="question13" value="no"> No</label>
+    </div>
+  
+  <!-- Question 14 -->
+  <div class="form-group">
+      <label for="question14">14.	Have you ever been diagnosed with cervical cancer?</label><br>
+      <label><input type="radio" name="question14" value="yes"> Yes</label>
+      <label><input type="radio" name="question14" value="no"> No</label>
+    </div>
+
+  <!-- Question 15 -->
+
+  <div class="form-group">
+      <label for="question15">15.	Do you have a history of HIV/AIDs? </label><br>
+      <label><input type="radio" name="question15" value="yes"> Yes</label>
+      <label><input type="radio" name="question15" value="no"> No</label>
+    </div>
+  
+  <!-- Question 16 -->
+  <div class="form-group">
+      <label for="question16">16.	Are you on hormone replacement therapy for gender-affirming care? </label><br>
+      <label><input type="radio" name="question16" value="yes"> Yes</label>
+      <label><input type="radio" name="question16" value="no"> No</label>
+    </div>
+
+  <!-- Break sentence -->
+  <p>Now let's look at your preferences for birth control:</p><br>
+
+  <!-- Second set of questions -->
+  
+  <!-- Question 17 -->
+  <div class="form-group">
+      <label for="question17">17. Do you prefer hormonal birth control methods?</label><br>
+      <label><input type="radio" name="question17" value="yes"> Yes</label>
+      <label><input type="radio" name="question17" value="no"> No</label>
+  </div>
+
+  <!-- Question 18 -->
+  <div class="form-group">
+      <label for="question18"> 18. Do you have any interest in getting your tubes tied? </label><br>
+      <label><input type="radio" name="question18" value="yes"> Yes</label>
+      <label><input type="radio" name="question18" value="no"> No</label>
+  </div>
+
+  <!-- Question 19 -->
+  <div class="form-group">
+      <label for="question19">19. Are you consistent with taking daily pills? </label><br>
+      <label><input type="radio" name="question19" value="yes"> Yes</label>
+      <label><input type="radio" name="question19" value="no"> No</label>
+  </div>
+
+  <!-- Question 20 -->
+  <div class="form-group">
+      <label for="question20">20. Check off what is most important to you (choose as many as you want)</label><br>
+      <label><input type="checkbox" name="question20" value="a"> Effective, dependable birth control</label><br>
+      <label><input type="checkbox" name="question20" value="b"> Easy to hide (from parents, roommates, friends, caregivers, etc.)</label><br>
+      <label><input type="checkbox" name="question20" value="c"> Ready in the heat of the moment</label><br>
+      <label><input type="checkbox" name="question20" value="d"> Long-standing</label><br>
+      <label><input type="checkbox" name="question20" value="e"> Low maintenance</label><br>
+      <label><input type="checkbox" name="question20" value="f"> Want hormone therapy to reduce symptoms of heavy painful periods</label><br>
+      <label><input type="checkbox" name="question20" value="g"> Accessible without a clinical appointment or coming to the doctor's office.</label><br>
+      <label><input type="checkbox" name="question20" value="h"> None of the above</label>
+  </div>
+
+<!-- Add the hidden input field for the sorted results -->
+<input type="hidden" name="" value="{{ sorted_results }}">
+
+
+<!-- Submit button -->
+<input type="submit" class="btn btn-primary" value="Submit" id="submit-button">
+</form>
+
+{% if total %}
+<h1>Results</h1>
+<p>Sorted Results: {{ sorted_results }}</p>
+{% endif %}
+
+<!-- JavaScript code for form validation -->
+<!-- check if all questions are answered within javascript function-->
+
+<!-- JavaScript code for form validation -->
+<script>
+document.getElementById('submit-button').addEventListener('click', function(event) {
+  var questionGroups = document.getElementsByClassName('form-group');
+  var unansweredQuestions = [];
+
+  for (var i = 0; i < questionGroups.length; i++) {
+    var radios = questionGroups[i].querySelectorAll('input[type="radio"]');
+    var checkboxes = questionGroups[i].querySelectorAll('input[type="checkbox"]');
+    var selects = questionGroups[i].querySelectorAll('select');
+    var isChecked = false;
+
+    if (radios.length > 0) {
+      for (var j = 0; j < radios.length; j++) {
+        if (radios[j].checked) {
+          isChecked = true;
+          break;
+        }
+      }
+    } else if (checkboxes.length > 0) {
+      var checkedCount = 0;
+      for (var j = 0; j < checkboxes.length; j++) {
+        if (checkboxes[j].checked) {
+          checkedCount++;
+        }
+      }
+      isChecked = (checkedCount > 0);
+    } else if (selects.length > 0) {
+      var selectedCount = 0;
+      for (var j = 0; j < selects.length; j++) {
+        if (selects[j].selectedIndex !== -1) {
+          selectedCount++;
+        }
+      }
+      isChecked = (selectedCount > 0);
+    }
+
+    if (!isChecked) {
+      unansweredQuestions.push(i + 1);
+    }
+  }
+
+  if (unansweredQuestions.length > 0) {
+    event.preventDefault();
+    var questionNumbers = unansweredQuestions.join(', ');
+    alert('Please answer all questions before submitting. Unanswered questions: ' + questionNumbers);
+  }
+});
+</script>
+
+
