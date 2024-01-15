@@ -69,7 +69,7 @@ def calculate_total(question1, question2, question3, question4, question5, quest
         (question1, ['combined_oral_hormonal', 'patch', 'ring']),
         (question2, ['combined_oral_hormonal', 'patch', 'ring']),
         (question3, ['fam']),
-        (question4 != 'j', ['combined_oral_hormonal', 'patch', 'ring']),
+        # (question4 != 'j', ['combined_oral_hormonal', 'patch', 'ring']),
         (question5, ['combined_oral_hormonal', 'patch', 'ring']),
         (question6, ['combined_oral_hormonal', 'patch', 'ring']),
         (question7, ['combined_oral_hormonal', 'patch', 'ring']),
@@ -162,6 +162,11 @@ def calculate_total(question1, question2, question3, question4, question5, quest
         if condition == 'yes':
             for option in options:
                 results[option] = -1
+
+     if any(letter in question4 for letter in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']):
+        results['combined_oral_hormonal'] = -1
+        results['patch'] = -1
+        results['ring'] = -1
 
     if question19 == 'no':
         results['combined_oral_hormonal'] = -1
