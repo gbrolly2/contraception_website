@@ -1,11 +1,48 @@
-<h1>Results</h1>
-<p>Sorted Results: {{ sorted_results }}</p>
+{% load static %}
 
-<!-- Educational Material -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... other head elements ... -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+  
+<h1>Results</h1>
+
+<p>Based on your health history and personal preferences, we have ranked the following contraception options as your top recommendations:</p>
+
+{% for result in sorted_results %}
+    {% if forloop.counter == 1 %}
+        <h2>Here are your top three results based on your selected answers:</h2>
+        <ol>
+    {% endif %}
+
+    {% if forloop.counter <= 3 %}
+        <li{% if forloop.counter == 3 %} class="last-bold-item"{% endif %}>
+            <strong>{{ result }}</strong>
+        </li>
+    {% endif %}
+
+    {% if forloop.counter == 3 %}
+        </ol>
+        <h2>Here are some other relevant options you could discuss with your doctor:</h2>
+        <ol start="4">
+    {% endif %}
+
+    {% if forloop.counter > 3 %}
+        <li>{{ result }}</li>
+    {% endif %}
+
+    {% if forloop.last %}
+        </ol>
+    {% endif %}
+{% endfor %}
+
 <h2>Educational Material</h2>
 
 
 
+  
 <h3>Emergency Contraception Options and Information</h3>
 <p><strong>Plan B (progesterone only)</strong></p>
 <ul>
