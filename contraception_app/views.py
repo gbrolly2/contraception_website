@@ -69,19 +69,20 @@ def calculate_total(question1, question2, question3, question4, question5, quest
         'copper_iud': 0,
         'combined_oral_hormonal': 0,
         'nexplanon': 0,
+        'patch': 0,
+        'ring': 0,
         'depo-provera': 0,
         'progesterone_only_oral_hormonal': 0,
-        'sterilization': 0,
-        'emergency': 0,
-        'cervical_caps_and_diaphragms': 0,
-        'fam': 0,
+        'sterilization': 0,        
+        'cervical_caps_and_diaphragms': 0,  
         'condoms': 0,
         'internal_condoms': 0,
         'spermicide_or_vaginal_sponge': 0,
         'pulling_out': 0,
-        'abstinence': 0,
-        'patch': 0,
-        'ring': 0
+        'fam': 0,
+        'abstinence': 0,        
+        'emergency': 0,
+
     }
 
     conditions = [
