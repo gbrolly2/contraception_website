@@ -1,0 +1,15 @@
+# .gitignore
+
+# Ignore the collected static files directory
+staticfiles/
+
+# Ignore all SQLite database files
+*.sqlite3
+
+# Ignore all .pyc files (compiled Python files)
+__pycache__/
+*.pyc
+
+#all secret keys
+.env
+secret_key.txt
