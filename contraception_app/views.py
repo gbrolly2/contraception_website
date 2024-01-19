@@ -174,7 +174,8 @@ def calculate_total(question1, question2, question3, question4, question5, quest
     
 
     sorted_results = sorted(results.items(), key=lambda x: x[1], reverse=True)
-    sorted_results = [(method, score) for method, score in sorted_results if score != -1]
+    # sorted_results = [(method, score) for method, score in sorted_results if score != -1]
+    sorted_results = [method for method, score in sorted_results if score != -1]
 
     return sorted_results
 
