@@ -89,21 +89,27 @@ def calculate_total(question1, question2, question3, question4, question5, quest
         results['combined_oral_hormonal'] += 10
         results['patch'] += 10
         results['ring'] += 10
+        results['nexplanon'] += 10
+        results['depo-provera'] += 10
+        results['progesterone_only_oral_hormonal'] += 10
+        results['iud'] += 10
 
     if question18 == 'yes':
-        results['sterilization'] += 20
+        results['sterilization'] += 25
+    else:
+        results['sterilization'] = -1
     
     if 'a' in question20:
         results['iud'] += 1
         results['copper_iud'] += 1
         results['nexplanon'] += 1
-        results['sterilization'] += 1
+       # results['sterilization'] += 1
         results['abstinence'] += 1
 
     if 'b' in question20:
         results['iud'] += 1
         results['copper_iud'] += 1
-        results['sterilization'] += 1
+      #  results['sterilization'] += 1
         results['nexplanon'] += 1
         results['depo-provera'] += 1
         
@@ -116,21 +122,21 @@ def calculate_total(question1, question2, question3, question4, question5, quest
         results['patch'] += 1
         results['condoms'] += 1
         results['internal_condoms'] += 1
-        results['sterilization'] += 1
+      #  results['sterilization'] += 1
         results['ring'] += 1
 
     if 'd' in question20:
         results['iud'] += 1
         results['copper_iud'] += 1
         results['nexplanon'] += 1
-        results['sterilization'] += 1
+    #    results['sterilization'] += 1
 
     if 'e' in question20:
         results['iud'] += 1
         results['copper_iud'] += 1
         results['nexplanon'] += 1
         results['depo-provera'] += 1
-        results['sterilization'] += 1
+    #    results['sterilization'] += 1
 
     if 'f' in question20:
         results['iud'] += 1
