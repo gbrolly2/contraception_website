@@ -6,13 +6,20 @@ class QuestionnaireForm(forms.Form):
         ('yes', 'Yes'),
         ('no', 'No'),
     ]
-    
+        #choices for 12-16
     YES_NO_PREFER_NOT_TO_ANSWER_CHOICES = [
         ('yes', 'Yes'),
         ('no', 'No'),
         ('prefer_not_to_answer', 'Prefer not to answer')
     ]
 
+    # Choices for question 17 
+    YES_NO_NO_PREFERENCE_CHOICES = [
+        ('yes', 'Yes'),
+        ('no', 'No'),
+        ('no_preference', 'No Preference')
+    ]
+    
     QUESTION4_CHOICES = [
         ('a', '35 years or older and smoke'),
         ('b', 'High blood pressure'),
@@ -53,7 +60,7 @@ class QuestionnaireForm(forms.Form):
     question14 = forms.ChoiceField(label='14. Have you ever been diagnosed with cervical cancer?', choices=YES_NO_PREFER_NOT_TO_ANSWER_CHOICES, widget=forms.RadioSelect)
     question15 = forms.ChoiceField(label='15. Do you have a history of HIV/AIDs?', choices=YES_NO_PREFER_NOT_TO_ANSWER_CHOICES, widget=forms.RadioSelect)
     question16 = forms.ChoiceField(label='16. Are you on hormone replacement therapy for gender-affirming care?', choices=YES_NO_PREFER_NOT_TO_ANSWER_CHOICES, widget=forms.RadioSelect)
-    question17 = forms.ChoiceField(label='17. Do you prefer hormonal birth control methods?', choices=YES_NO_CHOICES, widget=forms.RadioSelect)
+    question17 = forms.ChoiceField(label='17. Do you prefer hormonal birth control methods?', choices=YES_NO_NO_PREFERENCE_CHOICES, widget=forms.RadioSelect)
     question18 = forms.ChoiceField(label='18. Do you have any interest in getting your tubes tied?', choices=YES_NO_CHOICES, widget=forms.RadioSelect)
     question19 = forms.ChoiceField(label='19. Are you consistent with taking daily pills?', choices=YES_NO_CHOICES, widget=forms.RadioSelect)
     question20 = forms.MultipleChoiceField(label='20. Check off what is most important to you (choose as many as you want)', choices=QUESTION20_CHOICES, widget=forms.CheckboxSelectMultiple)
