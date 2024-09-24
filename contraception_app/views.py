@@ -98,7 +98,7 @@ def calculate_total(question1, question2, question3, question4, question5, quest
         (question10, ['cervical_caps_and_diaphragms']),
         (question11, ['iud', 'copper_iud']),
         (question12, ['copper_iud']),
-        (question13, ['copper_iud']),
+        (question13, ['iud','copper_iud']),
         (question14, ['cervical_caps_and_diaphragms']),
         (question15, ['cervical_caps_and_diaphragms']),
         (question16, ['fam']),
@@ -113,11 +113,21 @@ def calculate_total(question1, question2, question3, question4, question5, quest
         results['depo-provera'] += 10
         results['progesterone_only_oral_hormonal'] += 10
         results['iud'] += 10
-
+    elif question17 == 'no':
+        results['sterilization'] += 11
+        results['copper_iud'] += 10  
+        results['cervical_caps_and_diaphragms'] += 10       
+        results['condoms'] += 10
+        results['internal_condoms'] += 10
+        results['spermicide_or_vaginal_sponge'] += 10
+        results['pulling_out'] += 10
+        results['fam'] += 10
+        results['abstinence'] += 10  
+        
     if question18 == 'yes':
         results['sterilization'] += 25
-    else:
-        results['sterilization'] = -1
+    # else:
+       # results['sterilization'] = -1
     
     if 'a' in question20:
         results['iud'] += 1
